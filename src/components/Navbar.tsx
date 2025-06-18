@@ -52,13 +52,17 @@ export default function Navbar({ activeSection }: NavbarProps) {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* <motion.div
-            className="text-xl font-bold text-primary"
+          <motion.div
+            // className="text-xl font-bold   bg-gradient-to-r from-black via-rose-500 to-black bg-clip-text text-transparent "
+            className="text-xl font-bold 
+             bg-gradient-to-r from-black via-rose-500 to-black 
+             dark:from-rose-400 dark:via-pink-500 dark:to-rose-400 
+             bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
           >
             Ruma.dev
-          </motion.div> */}
-          <motion.div
+          </motion.div>
+          {/* <motion.div
             className="text-xl font-bold text-primary"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -66,7 +70,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
             whileHover={{ scale: 1.05 }}
           >
             Ruma.dev
-          </motion.div>
+          </motion.div> */}
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">

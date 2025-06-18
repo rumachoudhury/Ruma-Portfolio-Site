@@ -15,6 +15,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-hot-toast";
 
 interface FormData {
   name: string;
@@ -23,26 +26,27 @@ interface FormData {
 }
 
 export default function ContactSection() {
+  const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const {
     register,
-    handleSubmit,
-    reset,
+    // handleSubmit,
+    // reset,
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit = async (data: FormData) => {
-    setIsSubmitting(true);
+  // const onSubmit = async (data: FormData) => {
+  //   setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+  //   // Simulate form submission
+  //   await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    console.log("Form submitted:", data);
+  //   console.log("Form submitted:", data);
 
-    reset();
-    setIsSubmitting(false);
-  };
+  //   reset();
+  //   setIsSubmitting(false);
+  // };
 
   const contactInfo = [
     {
@@ -64,6 +68,28 @@ export default function ContactSection() {
       href: "#",
     },
   ];
+
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const result = await emailjs.sendForm(
+        "service_w6o00z4",
+        "template_tnup70e",
+        form.current!,
+        "Jh9mEHBh23gqVO_KG"
+      );
+      console.log(result.text);
+      toast.success("Message sent successfully!");
+      form.current?.reset();
+    } catch (error) {
+      toast.error("Failed to send message.");
+      console.error(error);
+    } finally {
+      setIsSubmitting(false); // Always reset
+    }
+  };
 
   return (
     <section id="contact" className="py-20 bg-muted/30">
@@ -144,7 +170,8 @@ export default function ContactSection() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                {/* <form onSubmit={handleSubmit(onSubmit)} className="space-y-6"> */}
+                <form ref={form} onSubmit={sendEmail} className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
                     <Input

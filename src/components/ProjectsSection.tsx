@@ -12,67 +12,129 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import Link from "next/link";
+
+// const projects = [
+//   {
+//     title: "E-Commerce Platform",
+//     description:
+//       "A full-featured e-commerce platform with user authentication, payment integration, and admin dashboard.",
+//     image: "/placeholder.svg?height=300&width=500",
+//     technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+//     liveUrl: "https://example.com",
+//     githubUrl: "https://github.com",
+//   },
+//   {
+//     title: "Task Management App",
+//     description:
+//       "A collaborative task management application with real-time updates and team collaboration features.",
+//     image: "/placeholder.svg?height=300&width=500",
+//     technologies: [
+//       "Next.js",
+//       "TypeScript",
+//       "Socket.io",
+//       "MongoDB",
+//       "Framer Motion",
+//     ],
+//     liveUrl: "https://example.com",
+//     githubUrl: "https://github.com",
+//   },
+//   {
+//     title: "Social Media Dashboard",
+//     description:
+//       "Analytics dashboard for social media management with data visualization and reporting features.",
+//     image: "/placeholder.svg?height=300&width=500",
+//     technologies: ["React", "Express.js", "Chart.js", "MongoDB", "Material-UI"],
+//     liveUrl: "https://example.com",
+//     githubUrl: "https://github.com",
+//   },
+//   {
+//     title: "Real Estate Platform",
+//     description:
+//       "Property listing platform with advanced search, filters, and virtual tour integration.",
+//     image: "/placeholder.svg?height=300&width=500",
+//     technologies: ["Next.js", "Node.js", "MongoDB", "Mapbox", "Tailwind CSS"],
+//     liveUrl: "https://example.com",
+//     githubUrl: "https://github.com",
+//   },
+//   {
+//     title: "Learning Management System",
+//     description:
+//       "Educational platform with course management, video streaming, and progress tracking.",
+//     image: "/placeholder.svg?height=300&width=500",
+//     technologies: ["React", "Node.js", "MongoDB", "AWS S3", "Redux"],
+//     liveUrl: "https://example.com",
+//     githubUrl: "https://github.com",
+//   },
+//   {
+//     title: "Weather App",
+//     description:
+//       "Beautiful weather application with location-based forecasts and interactive maps.",
+//     image: "/placeholder.svg?height=300&width=500",
+//     technologies: ["React", "OpenWeather API", "Leaflet", "Tailwind CSS"],
+//     liveUrl: "https://example.com",
+//     githubUrl: "https://github.com",
+//   },
+// ];
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured e-commerce platform with user authentication, payment integration, and admin dashboard.",
-    image: "/placeholder.svg?height=300&width=500",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    title: "High Paid Jobs",
+    description: "Job portal built with Next.js and TypeScript.",
+    image: "/high-paid-job.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://high-paid-jobs.vercel.app",
+    githubUrl: "https://github.com/rumachoudhury/high-paid-jobs",
   },
   {
-    title: "Task Management App",
+    title: "Scale Startup Project",
+    description: "Startup-focused landing page using TypeScript.",
+    image: "/scale-startup.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://scale-startup-project.vercel.app",
+    githubUrl: "https://github.com/rumachoudhury/scale-startup-project",
+  },
+  {
+    title: "Digital Tech Hub",
     description:
-      "A collaborative task management application with real-time updates and team collaboration features.",
-    image: "/placeholder.svg?height=300&width=500",
+      "Full-Stack E-commerce platform with user authentication, payment integration and cart functionality..",
+    image: "/digital-tech-hub.png",
     technologies: [
       "Next.js",
+      "Tailwind CSS",
       "TypeScript",
-      "Socket.io",
+      "Node.js",
       "MongoDB",
-      "Framer Motion",
+      "shadcn",
     ],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    liveUrl: "https://digital-tech-hub.vercel.app",
+    githubUrl: "https://github.com/rumachoudhury/digital-tech-hub",
   },
   {
-    title: "Social Media Dashboard",
-    description:
-      "Analytics dashboard for social media management with data visualization and reporting features.",
-    image: "/placeholder.svg?height=300&width=500",
-    technologies: ["React", "Express.js", "Chart.js", "MongoDB", "Material-UI"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    title: "Fresh Bucket",
+    description: "Online grocery store with shopping cart functionality.",
+    image: "/fresh-bucket.png",
+    technologies: ["React", "Tailwind CSS"],
+    liveUrl: "https://fresh-bucket.vercel.app",
+    githubUrl: "https://github.com/rumachoudhury/Fresh-Bucket",
   },
   {
-    title: "Real Estate Platform",
-    description:
-      "Property listing platform with advanced search, filters, and virtual tour integration.",
-    image: "/placeholder.svg?height=300&width=500",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Mapbox", "Tailwind CSS"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    title: "Express CRUD",
+    description: "Simple CRUD app built with Express.js and MongoDB.",
+    image: "/projects/express-crud.png",
+    technologies: ["Express.js", "MongoDB", "Node.js"],
+    liveUrl: "https://express-crud-app.vercel.app",
+    githubUrl: "https://github.com/rumachoudhury/express-crud",
   },
   {
-    title: "Learning Management System",
+    title: " E-Commerce Platform ",
+
     description:
-      "Educational platform with course management, video streaming, and progress tracking.",
-    image: "/placeholder.svg?height=300&width=500",
-    technologies: ["React", "Node.js", "MongoDB", "AWS S3", "Redux"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    title: "Weather App",
-    description:
-      "Beautiful weather application with location-based forecasts and interactive maps.",
-    image: "/placeholder.svg?height=300&width=500",
-    technologies: ["React", "OpenWeather API", "Leaflet", "Tailwind CSS"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+      "A full-featured e-commerce platform with user authentication, payment integration, and admin dashboard.",
+    image: "/ecommerce-project.png",
+    technologies: ["React", "sass"],
+    liveUrl: "https://ecommerce-sass-project.vercel.app",
+    githubUrl: "https://github.com/yourusername/ecommerce-project",
   },
 ];
 
@@ -110,7 +172,8 @@ export default function ProjectsSection() {
               <Card className="h-full overflow-hidden hover:shadow-lg transition-all duration-300 group">
                 <div className="relative overflow-hidden">
                   <Image
-                    src={project.image || "/placeholder.svg"}
+                    // src={project.image || "/placeholder.svg"}
+                    src={project.image}
                     alt={project.title}
                     width={500}
                     height={500}
@@ -118,14 +181,14 @@ export default function ProjectsSection() {
                   />
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                     <Button size="sm" variant="secondary" asChild>
-                      <a
+                      <Link
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo
-                      </a>
+                      </Link>
                     </Button>
                     <Button size="sm" variant="secondary" asChild>
                       <a

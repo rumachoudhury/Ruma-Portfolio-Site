@@ -3,19 +3,78 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+  SiGit,
+  SiDocker,
+} from "react-icons/si";
+// import { ServerCog, Database, Code, Wind } from "lucide-react"; // for general icons fallback
+
+// const technologies = [
+//   { name: "HTML5", icon: "🌐", color: "from-orange-400 to-orange-600" },
+//   { name: "CSS3", icon: "🎨", color: "from-blue-400 to-blue-600" },
+//   { name: "JavaScript", icon: "⚡", color: "from-yellow-400 to-yellow-600" },
+//   { name: "TypeScript", icon: "📘", color: "from-blue-500 to-blue-700" },
+//   { name: "React", icon: "⚛️", color: "from-cyan-400 to-cyan-600" },
+//   { name: "Next.js", icon: "▲", color: "from-gray-700 to-gray-900" },
+//   { name: "Node.js", icon: "🟢", color: "from-green-400 to-green-600" },
+//   { name: "Express.js", icon: "🚀", color: "from-gray-600 to-gray-800" },
+//   { name: "MongoDB", icon: "🍃", color: "from-green-500 to-green-700" },
+//   { name: "Tailwind CSS", icon: "💨", color: "from-teal-400 to-teal-600" },
+//   { name: "Git", icon: "📚", color: "from-red-400 to-red-600" },
+//   { name: "Docker", icon: "🐳", color: "from-blue-400 to-blue-600" },
+// ];
+
 const technologies = [
-  { name: "HTML5", icon: "🌐", color: "from-orange-400 to-orange-600" },
-  { name: "CSS3", icon: "🎨", color: "from-blue-400 to-blue-600" },
-  { name: "JavaScript", icon: "⚡", color: "from-yellow-400 to-yellow-600" },
-  { name: "TypeScript", icon: "📘", color: "from-blue-500 to-blue-700" },
-  { name: "React", icon: "⚛️", color: "from-cyan-400 to-cyan-600" },
-  { name: "Next.js", icon: "▲", color: "from-gray-700 to-gray-900" },
-  { name: "Node.js", icon: "🟢", color: "from-green-400 to-green-600" },
-  { name: "Express.js", icon: "🚀", color: "from-gray-600 to-gray-800" },
-  { name: "MongoDB", icon: "🍃", color: "from-green-500 to-green-700" },
-  { name: "Tailwind CSS", icon: "💨", color: "from-teal-400 to-teal-600" },
-  { name: "Git", icon: "📚", color: "from-red-400 to-red-600" },
-  { name: "Docker", icon: "🐳", color: "from-blue-400 to-blue-600" },
+  { name: "HTML5", icon: <SiHtml5 />, color: "from-orange-400 to-orange-600" },
+  { name: "CSS3", icon: <SiCss3 />, color: "from-blue-400 to-blue-600" },
+  {
+    name: "JavaScript",
+    icon: <SiJavascript />,
+    color: "from-yellow-400 to-yellow-600",
+  },
+  {
+    name: "TypeScript",
+    icon: <SiTypescript />,
+    color: "from-blue-500 to-blue-700",
+  },
+  { name: "React", icon: <SiReact />, color: "from-cyan-400 to-cyan-600" },
+  {
+    name: "Next.js",
+    icon: <SiNextdotjs />,
+    color: "from-gray-700 to-gray-900",
+  },
+  {
+    name: "Node.js",
+    icon: <SiNodedotjs />,
+    color: "from-green-400 to-green-600",
+  },
+  {
+    name: "Express.js",
+    icon: <SiExpress />,
+    color: "from-gray-600 to-gray-800",
+  },
+  {
+    name: "MongoDB",
+    icon: <SiMongodb />,
+    color: "from-green-500 to-green-700",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss />,
+    color: "from-teal-400 to-teal-600",
+  },
+  { name: "Git", icon: <SiGit />, color: "from-red-400 to-red-600" },
+  { name: "Docker", icon: <SiDocker />, color: "from-blue-400 to-blue-600" },
 ];
 
 export default function ExpertiseSection() {

@@ -35,7 +35,20 @@ export default function Footer() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h3 className="text-2xl font-bold text-primary mb-2">Ruma.dev</h3>
+            {/* <h3 className="text-2xl font-bold text-primary mb-2">Ruma.dev</h3> */}
+            <motion.div
+              className="text-xl font-bold bg-gradient-to-r from-black via-rose-500 to-black bg-clip-text text-transparent dark:from-rose-300 dark:via-pink-500 dark:to-rose-300"
+              whileHover={{
+                scale: [1, 1.1, 1.05],
+                transition: {
+                  duration: 0.4,
+                  times: [0, 0.5, 1],
+                  ease: "easeInOut",
+                },
+              }}
+            >
+              Ruma.dev
+            </motion.div>
             <p className="text-muted-foreground">
               Building the future, one line of code at a time.
             </p>

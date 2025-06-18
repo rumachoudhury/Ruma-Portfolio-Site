@@ -44,7 +44,7 @@ export default function AboutSection() {
                 alt="Ruma"
                 width={500}
                 height={500}
-                className="w-[500px] h-[500px] max-w-lg rounded-full border border-amber-400"
+                className="object-cover rounded-full border border-amber-400"
               />
             </CardContent>
             {/* </Card> */}
@@ -57,7 +57,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-semibold">
+            <h3 className="text-2xl font-semibold   bg-slate-800 text-white inline-block">
               Hello! I&apos;m Ruma Choudhury
             </h3>
 
