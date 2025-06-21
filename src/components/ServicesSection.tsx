@@ -13,10 +13,11 @@ import {
 const services = [
   {
     icon: Code,
-    title: "Full Stack Development",
+    title: "Frontend Development (MERN Stack)",
     description:
-      "End-to-end web application development using the MERN stack with modern best practices and scalable architecture.",
+      "Crafting high-performance, SEO-friendly web applications using Next.js and React. Skilled in building scalable user interfaces as part of the MERN stack.",
   },
+
   {
     icon: Smartphone,
     title: "Responsive Design",
@@ -67,7 +68,7 @@ export default function ServicesSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -78,11 +79,12 @@ export default function ServicesSection() {
               whileHover={{ scale: 1.02 }}
               className="h-full"
             >
-              <Card className="h-full hover:shadow-lg transition-all duration-300 group">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 group hover:bg-[#A6BBD2]">
                 <CardHeader>
                   <motion.div
                     className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors"
-                    whileHover={{ scale: 1.1 }}
+                    // whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.03, rotate: 0.3 }}
                   >
                     <service.icon className="h-6 w-6 text-primary" />
                   </motion.div>

@@ -53,11 +53,13 @@ export default function Navbar({ activeSection }: NavbarProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div
-            // className="text-xl font-bold   bg-gradient-to-r from-black via-rose-500 to-black bg-clip-text text-transparent "
             className="text-xl font-bold 
              bg-gradient-to-r from-black via-rose-500 to-black 
              dark:from-rose-400 dark:via-pink-500 dark:to-rose-400 
              bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
             whileHover={{ scale: 1.05 }}
           >
             Ruma.dev
@@ -73,13 +75,13 @@ export default function Navbar({ activeSection }: NavbarProps) {
           </motion.div> */}
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4 border   border-gray/15 rounded-md border-gray/10 back-drop-blur px-1">
             <div className="flex space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`relative px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
+                  className={`relative px-3 py-2 text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
                     activeSection === item.id
                       ? "text-primary"
                       : "text-muted-foreground"

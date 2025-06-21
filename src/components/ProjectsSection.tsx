@@ -83,7 +83,7 @@ const projects = [
     description: "Job portal built with Next.js and TypeScript.",
     image: "/high-paid-job.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    liveUrl: "https://high-paid-jobs.vercel.app",
+    liveUrl: "https://high-paid-jobs-one.vercel.app",
     githubUrl: "https://github.com/rumachoudhury/high-paid-jobs",
   },
   {
@@ -91,13 +91,13 @@ const projects = [
     description: "Startup-focused landing page using TypeScript.",
     image: "/scale-startup.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    liveUrl: "https://scale-startup-project.vercel.app",
+    liveUrl: "https://scale-startup-project-txlg.vercel.app/",
     githubUrl: "https://github.com/rumachoudhury/scale-startup-project",
   },
   {
     title: "Digital Tech Hub",
     description:
-      "Full-Stack E-commerce platform with user authentication, payment integration and cart functionality..",
+      "A full-stack e-commerce platform featuring product search, user authentication, cart functionality, and secure checkout with payment integration.",
     image: "/digital-tech-hub.png",
     technologies: [
       "Next.js",
@@ -105,36 +105,39 @@ const projects = [
       "TypeScript",
       "Node.js",
       "MongoDB",
-      "shadcn",
+      "shadcn/ui",
     ],
-    liveUrl: "https://digital-tech-hub.vercel.app",
+    liveUrl: "https://digital-tech-hub.vercel.app/",
     githubUrl: "https://github.com/rumachoudhury/digital-tech-hub",
   },
+
   {
     title: "Fresh Bucket",
     description: "Online grocery store with shopping cart functionality.",
     image: "/fresh-bucket.png",
     technologies: ["React", "Tailwind CSS"],
-    liveUrl: "https://fresh-bucket.vercel.app",
+    liveUrl: "https://splendorous-monstera-13bfe5.netlify.app/",
     githubUrl: "https://github.com/rumachoudhury/Fresh-Bucket",
   },
   {
-    title: "Express CRUD",
-    description: "Simple CRUD app built with Express.js and MongoDB.",
-    image: "/projects/express-crud.png",
-    technologies: ["Express.js", "MongoDB", "Node.js"],
-    liveUrl: "https://express-crud-app.vercel.app",
-    githubUrl: "https://github.com/rumachoudhury/express-crud",
+    title: "Bootstrap-Fruit-burst-project",
+    description:
+      "Responsive Bootstrap project with multiple pages showcasing HTML, CSS, and images.",
+    image: "/bootstrap-fruit-burst.png",
+    technologies: ["Bootstrap", "HTML", "CSS"],
+    liveUrl: "https://loquacious-nougat-c8f43d.netlify.app/",
+    githubUrl: "https://github.com/rumachoudhury/Bootstrap-Fruit-burst-project",
   },
+
   {
     title: " E-Commerce Platform ",
-
     description:
-      "A full-featured e-commerce platform with user authentication, payment integration, and admin dashboard.",
+      "A frontend-focused e-commerce platform showcasing product display and pricing.",
     image: "/ecommerce-project.png",
     technologies: ["React", "sass"],
-    liveUrl: "https://ecommerce-sass-project.vercel.app",
-    githubUrl: "https://github.com/yourusername/ecommerce-project",
+    liveUrl:
+      "https://ecommerce-sass-project-git-main-ruma-choudhurys-projects.vercel.app/",
+    githubUrl: "https://github.com/rumachoudhury/ecommerce-sass-project",
   },
 ];
 

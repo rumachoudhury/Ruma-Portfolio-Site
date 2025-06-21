@@ -17,6 +17,7 @@ import {
   SiGit,
   SiDocker,
 } from "react-icons/si";
+import { Star } from "lucide-react";
 // import { ServerCog, Database, Code, Wind } from "lucide-react"; // for general icons fallback
 
 // const technologies = [
@@ -34,47 +35,161 @@ import {
 //   { name: "Docker", icon: "🐳", color: "from-blue-400 to-blue-600" },
 // ];
 
+// const technologies = [
+//   { name: "HTML5", icon: <SiHtml5 />, color: "from-[#E34F26] to-[#EF652A]" }, // HTML Orange
+//   { name: "CSS3", icon: <SiCss3 />, color: "from-[#264DE4] to-[#2965F1]" }, // CSS Blue
+//   {
+//     name: "JavaScript",
+//     icon: <SiJavascript />,
+//     color: "from-[#F7DF1E] to-[#FFE873]", // JS Yellow
+//   },
+//   {
+//     name: "TypeScript",
+//     icon: <SiTypescript />,
+//     color: "from-[#3178C6] to-[#4F91CD]", // TS Blue
+//   },
+//   { name: "React", icon: <SiReact />, color: "from-[#61DAFB] to-[#21A1F1]" }, // React Cyan
+//   {
+//     name: "Next.js",
+//     icon: <SiNextdotjs />,
+//     color: "from-[#000000] to-[#1A1A1A]", // Black/Gray for Next.js
+//   },
+//   {
+//     name: "Node.js",
+//     icon: <SiNodedotjs />,
+//     color: "from-[#68A063] to-[#3C873A]", // Node Green
+//   },
+//   {
+//     name: "Express.js",
+//     icon: <SiExpress />,
+//     color: "from-[#303030] to-[#000000]", // Gray to Black
+//   },
+//   {
+//     name: "MongoDB",
+//     icon: <SiMongodb />,
+//     color: "from-[#47A248] to-[#3FA037]", // Mongo Green
+//   },
+//   {
+//     name: "Tailwind CSS",
+//     icon: <SiTailwindcss />,
+//     color: "from-[#38BDF8] to-[#0EA5E9]", // Tailwind Blue
+//   },
+//   { name: "Git", icon: <SiGit />, color: "from-[#F1502F] to-[#E44D27]" }, // Git Orange-Red
+//   { name: "Docker", icon: <SiDocker />, color: "from-[#2496ED] to-[#0db7ed]" }, // Docker Blue
+// ];
+
+// const technologies = [
+//   {
+//     name: "HTML5",
+//     icon: <SiHtml5 className="text-[#E34F26] dark:text-[#FF6F4A]" />,
+//   },
+//   {
+//     name: "CSS3",
+//     icon: <SiCss3 className="text-[#1572B6] dark:text-[#1E90FF]" />,
+//   },
+//   {
+//     name: "JavaScript",
+//     icon: <SiJavascript className="text-[#F7DF1E] dark:text-[#F7DF1E]" />,
+//   },
+//   {
+//     name: "TypeScript",
+//     icon: <SiTypescript className="text-[#3178C6] dark:text-[#60A5FA]" />,
+//   },
+//   {
+//     name: "React",
+//     icon: <SiReact className="text-[#61DAFB] dark:text-[#61DAFB]" />,
+//   },
+//   {
+//     name: "Next.js",
+//     icon: <SiNextdotjs className="text-black dark:text-white" />,
+//   },
+//   {
+//     name: "Node.js",
+//     icon: <SiNodedotjs className="text-[#339933] dark:text-[#66BB6A]" />,
+//   },
+//   {
+//     name: "Express.js",
+//     icon: <SiExpress className="text-black dark:text-white" />,
+//   },
+//   {
+//     name: "MongoDB",
+//     icon: <SiMongodb className="text-[#47A248] dark:text-[#81C784]" />,
+//   },
+//   {
+//     name: "Tailwind CSS",
+//     icon: <SiTailwindcss className="text-[#38BDF8] dark:text-[#38BDF8]" />,
+//   },
+//   {
+//     name: "Git",
+//     icon: <SiGit className="text-[#F05032] dark:text-[#F87171]" />,
+//   },
+//   {
+//     name: "Docker",
+//     icon: <SiDocker className="text-[#2496ED] dark:text-[#60A5FA]" />,
+//   },
+// ];
+
 const technologies = [
-  { name: "HTML5", icon: <SiHtml5 />, color: "from-orange-400 to-orange-600" },
-  { name: "CSS3", icon: <SiCss3 />, color: "from-blue-400 to-blue-600" },
+  {
+    name: "HTML5",
+    icon: <SiHtml5 className="text-[#E34F26] dark:text-[#FF6F4A]" />,
+    bg: "bg-orange-100 dark:bg-orange-900",
+  },
+  {
+    name: "CSS3",
+    icon: <SiCss3 className="text-[#1572B6] dark:text-[#1E90FF]" />,
+    bg: "bg-blue-100 dark:bg-blue-900",
+  },
   {
     name: "JavaScript",
-    icon: <SiJavascript />,
-    color: "from-yellow-400 to-yellow-600",
+    icon: <SiJavascript className="text-[#F7DF1E] dark:text-[#F7DF1E]" />,
+    bg: "bg-yellow-100 dark:bg-yellow-800",
   },
   {
     name: "TypeScript",
-    icon: <SiTypescript />,
-    color: "from-blue-500 to-blue-700",
+    icon: <SiTypescript className="text-[#3178C6] dark:text-[#60A5FA]" />,
+    bg: "bg-blue-100 dark:bg-blue-800",
   },
-  { name: "React", icon: <SiReact />, color: "from-cyan-400 to-cyan-600" },
+  {
+    name: "React",
+    icon: <SiReact className="text-[#61DAFB] dark:text-[#61DAFB]" />,
+    bg: "bg-cyan-100 dark:bg-cyan-900",
+  },
   {
     name: "Next.js",
-    icon: <SiNextdotjs />,
-    color: "from-gray-700 to-gray-900",
+    icon: <SiNextdotjs className="text-black dark:text-white" />,
+    bg: "bg-gray-200 dark:bg-gray-800",
   },
   {
     name: "Node.js",
-    icon: <SiNodedotjs />,
-    color: "from-green-400 to-green-600",
+    icon: <SiNodedotjs className="text-[#339933] dark:text-[#66BB6A]" />,
+    bg: "bg-green-100 dark:bg-green-900",
   },
   {
     name: "Express.js",
-    icon: <SiExpress />,
-    color: "from-gray-600 to-gray-800",
+    icon: <SiExpress className="text-black dark:text-white" />,
+    bg: "bg-gray-100 dark:bg-gray-900",
   },
   {
     name: "MongoDB",
-    icon: <SiMongodb />,
-    color: "from-green-500 to-green-700",
+    icon: <SiMongodb className="text-[#47A248] dark:text-[#81C784]" />,
+    bg: "bg-green-100 dark:bg-green-900",
   },
   {
     name: "Tailwind CSS",
-    icon: <SiTailwindcss />,
-    color: "from-teal-400 to-teal-600",
+    icon: <SiTailwindcss className="text-[#38BDF8] dark:text-[#38BDF8]" />,
+    bg: "bg-sky-100 dark:bg-sky-900",
   },
-  { name: "Git", icon: <SiGit />, color: "from-red-400 to-red-600" },
-  { name: "Docker", icon: <SiDocker />, color: "from-blue-400 to-blue-600" },
+  {
+    name: "Git",
+    icon: <SiGit className="text-[#F05032] dark:text-[#F87171]" />,
+    bg: "bg-red-100 dark:bg-red-900",
+  },
+  {
+    name: "Docker",
+    icon: <SiDocker className="text-[#2496ED] dark:text-[#60A5FA]" />,
+    bg: "bg-blue-100 dark:bg-blue-900",
+  },
 ];
 
 export default function ExpertiseSection() {
@@ -107,12 +222,19 @@ export default function ExpertiseSection() {
             >
               <Card className="h-full cursor-pointer group hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <motion.div
+                  {/* <motion.div
                     className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br ${tech.color} flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300`}
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
                     {tech.icon}
+                  </motion.div> */}
+                  <motion.div
+                    className={`w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center shadow-md transition-all duration-300 group-hover:scale-110 ${tech.bg}`}
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <span className="text-3xl">{tech.icon}</span>
                   </motion.div>
                   <h3 className="font-semibold text-sm group-hover:text-primary transition-colors">
                     {tech.name}
@@ -130,7 +252,24 @@ export default function ExpertiseSection() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <h3 className="text-xl font-semibold mb-4">Always Learning</h3>
+          {/* <h3 className="text-xl font-semibold mb-4">Always Learning</h3> */}
+
+          <h3 className="text-xl font-semibold mb-4 flex items-center justify-center gap-2  text-blue-300">
+            <motion.span
+              animate={{ rotate: [0, 20, -20, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <Star className="w-5 h-5 text-yellow-500" />
+            </motion.span>
+            Always Learning
+            <motion.span
+              animate={{ rotate: [0, -20, 20, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <Star className="w-5 h-5 text-yellow-500" />
+            </motion.span>
+          </h3>
+
           <p className="text-muted-foreground max-w-3xl mx-auto">
             The tech world evolves rapidly, and I&apos;m committed to staying
             current with the latest trends and best practices. I regularly

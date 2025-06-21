@@ -34,6 +34,7 @@ export default function HeroSection() {
     <section
       id="hero"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      // className="min-h-screen pt-20 flex items-center justify-center relative overflow-hidden   bg-[url('/shiny-overlay.svg')] bg-cover bg-no-repeat mt-15"
     >
       {/* Background Animation */}
       <div className="absolute inset-0 -z-10">
@@ -76,11 +77,13 @@ export default function HeroSection() {
               text="Hi, I'm Ruma Choudhury"
               speed={80}
               className="text-primary"
+              // className="text-white"
             />
           </motion.h1>
 
           <motion.h2
             className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-8"
+            // className="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -90,6 +93,7 @@ export default function HeroSection() {
 
           <motion.p
             className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto"
+            // className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -133,6 +137,7 @@ export default function HeroSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
+              // className="text-gray-200 hover:text-primary transition-colors"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -143,6 +148,7 @@ export default function HeroSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
+              // className="text-gray-200 hover:text-primary transition-colors"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -151,6 +157,7 @@ export default function HeroSection() {
             <motion.a
               href="mailto:rumachoudhury7862@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
+              // className="text-gray-200 hover:text-primary transition-colors"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -164,7 +171,10 @@ export default function HeroSection() {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
         >
-          <ArrowDown className="h-6 w-6 text-muted-foreground" />
+          <ArrowDown
+            className="h-6 w-6 text-muted-foreground"
+            // className="h-6 w-6 text-gray-200 "
+          />
         </motion.div>
       </div>
     </section>

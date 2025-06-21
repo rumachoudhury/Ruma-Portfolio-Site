@@ -22,7 +22,11 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">About Me</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            {" "}
+            More About Me
+          </h2>
+
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Get to know more about my background, skills, and passion for web
             development
@@ -44,7 +48,7 @@ export default function AboutSection() {
                 alt="Ruma"
                 width={500}
                 height={500}
-                className="object-cover rounded-full border border-amber-400"
+                className="object-cover rounded-full border border-amber-400 h-[600px]"
               />
             </CardContent>
             {/* </Card> */}
@@ -57,17 +61,25 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-semibold   bg-slate-800 text-white inline-block">
+            <h3 className="sm:text-lg lg:text-2xl font-semibold   bg-slate-800 text-white inline-block">
               Hello! I&apos;m Ruma Choudhury
             </h3>
 
             <div className="space-y-4 text-muted-foreground">
-              <p>
+              {/* <p>
                 I&apos;m a passionate MERN Stack Developer with over 2 years of
                 experience in creating dynamic and responsive web applications.
                 My journey in web development started with a curiosity about how
                 websites work, and it has evolved into a deep passion for
                 building scalable and user-friendly applications.
+              </p> */}
+              <p>
+                I&apos;m a passionate MERN Stack Developer with hands-on
+                experience in building responsive and dynamic web
+                applications.My journey into web development began with a simple
+                curiosity about how websites work — and over time, that
+                curiosity turned into a deep love for creating clean, scalable,
+                and user-friendly digital experiences.
               </p>
               <p>
                 I specialize in the MERN stack (MongoDB, Express.js, React,
@@ -76,24 +88,34 @@ export default function AboutSection() {
                 simple, beautiful, and intuitive solutions.
               </p>
               <p>
-                When I&apos;m not coding, you can find me exploring new
-                technologies, contributing to open-source projects, or sharing
-                my knowledge with the developer community through blog posts and
-                tutorials.
+                When I&apos;m not coding, I love exploring new technologies,
+                learning from the developer community, and sharing my own
+                insights through blog posts and open-source contributions.
+              </p>
+
+              <p>
+                🏡 I enjoy working remotely — it allows me to stay close to my
+                family while doing the work I love.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-4 py-4">
               <div>
-                <h4 className="font-semibold text-primary">30+</h4>
-                <p className="text-sm text-muted-foreground">
+                <h4 className="font-semibold text-primary mr-2">✨ 20+</h4>
+                <p
+                  // className="text-sm text-muted-foreground"
+                  className="text-sm  text-blue-500 "
+                >
                   Projects Completed
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-primary">2+</h4>
-                <p className="text-sm text-muted-foreground">
-                  Years Experience
+                <h4 className="font-semibold text-primary">📆 2+</h4>
+                <p
+                  // className="text-sm text-muted-foreground"
+                  className="text-sm  text-blue-500 "
+                >
+                  Years of Practical Experience
                 </p>
               </div>
               {/* <div>
