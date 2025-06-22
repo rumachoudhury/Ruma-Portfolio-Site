@@ -79,7 +79,7 @@ export default function ServicesSection() {
               whileHover={{ scale: 1.02 }}
               className="h-full"
             >
-              <Card className="h-full hover:shadow-lg transition-all duration-300 group hover:bg-[#A6BBD2]">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 group ">
                 <CardHeader>
                   <motion.div
                     className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors"

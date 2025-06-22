@@ -15,119 +15,10 @@ import {
   SiMongodb,
   SiTailwindcss,
   SiGit,
-  SiDocker,
+  // SiDocker,
 } from "react-icons/si";
 import { Star } from "lucide-react";
-// import { ServerCog, Database, Code, Wind } from "lucide-react"; // for general icons fallback
-
-// const technologies = [
-//   { name: "HTML5", icon: "🌐", color: "from-orange-400 to-orange-600" },
-//   { name: "CSS3", icon: "🎨", color: "from-blue-400 to-blue-600" },
-//   { name: "JavaScript", icon: "⚡", color: "from-yellow-400 to-yellow-600" },
-//   { name: "TypeScript", icon: "📘", color: "from-blue-500 to-blue-700" },
-//   { name: "React", icon: "⚛️", color: "from-cyan-400 to-cyan-600" },
-//   { name: "Next.js", icon: "▲", color: "from-gray-700 to-gray-900" },
-//   { name: "Node.js", icon: "🟢", color: "from-green-400 to-green-600" },
-//   { name: "Express.js", icon: "🚀", color: "from-gray-600 to-gray-800" },
-//   { name: "MongoDB", icon: "🍃", color: "from-green-500 to-green-700" },
-//   { name: "Tailwind CSS", icon: "💨", color: "from-teal-400 to-teal-600" },
-//   { name: "Git", icon: "📚", color: "from-red-400 to-red-600" },
-//   { name: "Docker", icon: "🐳", color: "from-blue-400 to-blue-600" },
-// ];
-
-// const technologies = [
-//   { name: "HTML5", icon: <SiHtml5 />, color: "from-[#E34F26] to-[#EF652A]" }, // HTML Orange
-//   { name: "CSS3", icon: <SiCss3 />, color: "from-[#264DE4] to-[#2965F1]" }, // CSS Blue
-//   {
-//     name: "JavaScript",
-//     icon: <SiJavascript />,
-//     color: "from-[#F7DF1E] to-[#FFE873]", // JS Yellow
-//   },
-//   {
-//     name: "TypeScript",
-//     icon: <SiTypescript />,
-//     color: "from-[#3178C6] to-[#4F91CD]", // TS Blue
-//   },
-//   { name: "React", icon: <SiReact />, color: "from-[#61DAFB] to-[#21A1F1]" }, // React Cyan
-//   {
-//     name: "Next.js",
-//     icon: <SiNextdotjs />,
-//     color: "from-[#000000] to-[#1A1A1A]", // Black/Gray for Next.js
-//   },
-//   {
-//     name: "Node.js",
-//     icon: <SiNodedotjs />,
-//     color: "from-[#68A063] to-[#3C873A]", // Node Green
-//   },
-//   {
-//     name: "Express.js",
-//     icon: <SiExpress />,
-//     color: "from-[#303030] to-[#000000]", // Gray to Black
-//   },
-//   {
-//     name: "MongoDB",
-//     icon: <SiMongodb />,
-//     color: "from-[#47A248] to-[#3FA037]", // Mongo Green
-//   },
-//   {
-//     name: "Tailwind CSS",
-//     icon: <SiTailwindcss />,
-//     color: "from-[#38BDF8] to-[#0EA5E9]", // Tailwind Blue
-//   },
-//   { name: "Git", icon: <SiGit />, color: "from-[#F1502F] to-[#E44D27]" }, // Git Orange-Red
-//   { name: "Docker", icon: <SiDocker />, color: "from-[#2496ED] to-[#0db7ed]" }, // Docker Blue
-// ];
-
-// const technologies = [
-//   {
-//     name: "HTML5",
-//     icon: <SiHtml5 className="text-[#E34F26] dark:text-[#FF6F4A]" />,
-//   },
-//   {
-//     name: "CSS3",
-//     icon: <SiCss3 className="text-[#1572B6] dark:text-[#1E90FF]" />,
-//   },
-//   {
-//     name: "JavaScript",
-//     icon: <SiJavascript className="text-[#F7DF1E] dark:text-[#F7DF1E]" />,
-//   },
-//   {
-//     name: "TypeScript",
-//     icon: <SiTypescript className="text-[#3178C6] dark:text-[#60A5FA]" />,
-//   },
-//   {
-//     name: "React",
-//     icon: <SiReact className="text-[#61DAFB] dark:text-[#61DAFB]" />,
-//   },
-//   {
-//     name: "Next.js",
-//     icon: <SiNextdotjs className="text-black dark:text-white" />,
-//   },
-//   {
-//     name: "Node.js",
-//     icon: <SiNodedotjs className="text-[#339933] dark:text-[#66BB6A]" />,
-//   },
-//   {
-//     name: "Express.js",
-//     icon: <SiExpress className="text-black dark:text-white" />,
-//   },
-//   {
-//     name: "MongoDB",
-//     icon: <SiMongodb className="text-[#47A248] dark:text-[#81C784]" />,
-//   },
-//   {
-//     name: "Tailwind CSS",
-//     icon: <SiTailwindcss className="text-[#38BDF8] dark:text-[#38BDF8]" />,
-//   },
-//   {
-//     name: "Git",
-//     icon: <SiGit className="text-[#F05032] dark:text-[#F87171]" />,
-//   },
-//   {
-//     name: "Docker",
-//     icon: <SiDocker className="text-[#2496ED] dark:text-[#60A5FA]" />,
-//   },
-// ];
+import Image from "next/image";
 
 const technologies = [
   {
@@ -186,9 +77,17 @@ const technologies = [
     bg: "bg-red-100 dark:bg-red-900",
   },
   {
-    name: "Docker",
-    icon: <SiDocker className="text-[#2496ED] dark:text-[#60A5FA]" />,
-    bg: "bg-blue-100 dark:bg-blue-900",
+    name: "shadcn/ui",
+    icon: (
+      <Image
+        src="/shadcn-logo.jpg"
+        width={20}
+        height={20}
+        alt="shadcn/ui"
+        className="w-5 h-5"
+      />
+    ),
+    bg: "bg-black dark:bg-violet-900",
   },
 ];
 
