@@ -5,12 +5,13 @@ import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutSection() {
-  const handleDownloadResume = () => {
-    // Replace with actual resume download logic
-    console.log("Downloading resume...");
-  };
+  // const handleDownloadResume = () => {
+  //   // Replace with actual resume download logic
+  //   console.log("Downloading resume...");
+  // };
 
   return (
     <section id="about" className="py-20 bg-muted/30">
@@ -129,11 +130,21 @@ export default function AboutSection() {
                 </p>
               </div> */}
             </div>
-
-            <Button onClick={handleDownloadResume} className="w-full sm:w-auto">
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
-            </Button>
+            <Link
+              href={
+                "https://drive.google.com/file/d/1FFcYuVKVPb7Kq9ESLfkelXcQBXC8fiUN/view?usp=sharing"
+              }
+              download
+              target="_blank"
+            >
+              <Button
+                // onClick={handleDownloadResume}
+                className="w-full sm:w-auto"
+              >
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </div>
