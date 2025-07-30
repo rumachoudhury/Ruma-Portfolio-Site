@@ -139,7 +139,7 @@ export default function AboutSection() {
             >
               <Button
                 // onClick={handleDownloadResume}
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto cursor-pointer"
               >
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
